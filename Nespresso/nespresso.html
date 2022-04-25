@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nespresso</title>
+    <link rel="stylesheet" href="nespresso.css">
+    <script src="https://kit.fontawesome.com/949df75f70.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <a href=""><img src="./logo-white.svg" alt="logo"></a>
+        </header>
+        <div id="topBar">
+            <h2>Already a <span class="italic">Nespresso</span> customer?</h2>
+            <div>
+                <p> Select "Yes" for the question "Have you ever bought Nespresso coffee?"</p>
+                <p>Indicate your client number & postal code</p>    
+            </div>
+            <p>Then you can continuously benefit from the rewards program.</p>
+        </div>
+
+        <form action="" method="post">
+            <div id="form1">
+                <p class="bold">Have you placed an online order before?</p>
+                <p>Then you already have an online account and you can log-in <a href="">here</a>.</p>
+                <p>If not, you can activate your online account below and place your first online order.</p>
+                <div class="personal">
+                    <label class="required" for="firstName" id="firstNameLabel">First name <span class="star">*</span> </label>
+                    <div>
+                        <input type="text" name="firstName" id="firstName">
+                        <span class="error">All fields with an * are mandatory.</span>
+                    </div>
+                </div>
+                <div class="personal">
+                    <label class="required" for="lastName">Last name <span class="star">*</span> </label>
+                    <div>
+                        <input type="text" name="lastName" id="lastName">
+                        <span class="error">All fields with an * are mandatory.</span>
+                    </div>
+                </div>
+                <div class="personal">
+                    <label class="required" for="email">Email address <span class="star">*</span> </label>
+                    <div>
+                        <input type="text" name="email" id="email">
+                        <span class="error">All fields with an * are mandatory.</span>
+                    </div>
+                </div>
+                <div class="personal">
+                    <label class="required" for="pwd">Password <span class="star">*</span> </label>
+                    <div>
+                        <input type="text" name="pwd" id="pwd">
+                        <span class="error">All fields with an * are mandatory. 
+                            <p>You have to include capital letters, numbers and do not use your previous passwords.</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="memberHeader">
+                <h3>NESPRESSO CLUB MEMBERSHIP</h3>
+            </div>
+            
+            <div id="member">
+                <input type="radio" name="member" id="no" value="N">
+                <label for="no"> No, I do not have a <span class="italic">Nespresso</span> Club Membership number.</label>
+                <br>
+                <input type="radio" name="member" id="yes" value="Y" checked>
+                <label for="yes"> Yes, I do have a <span class="italic">Nespresso</span> Club Membership number.</label>
+                <div id="memberInfo">
+                    <div>
+                        <label class="required" for="mNumber">Membership number *</label>
+                        <div>
+                            <input type="text" name="mNumber" id="mNumber">
+                            <p><a href="">Where can you find your membership number? <i class="fa-solid fa-greater-than"></i></a></p>
+                            <span class="error">All fields with an * are mandatory.</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="required" for="postal">My postal code *</label>
+                        <div>
+                            <input type="text" name="postal" id="postal">
+                            <span class="error">All fields with an * are mandatory. </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="continue">
+                <p>By clicking on “Continue”, you acknowledge having read <span class="italic">Nespresso</span> <a href="">Privacy Notice</a>.</p>
+                <span class="error">The highlighted fields must be corrected before going further.</span>
+                <div>
+                    <button class="button" type="submit">CONTINUE <i class="fa-solid fa-greater-than"></i></button>
+                </div>
+            </div>
+        </form>
+        
+        <footer>
+            <div id="bottomBar">
+                <div class="language">    
+                    <img src="./fr.png" alt="frenchFlag">
+                    <select name="language" id="language">
+                        <option value="english">English</option>
+                        <option value="french">Français</option>
+                    </select>
+                </div>
+                <div class="navLinks">
+                    <nav id="nav1">
+                        <ul>
+                            <li><a href="">CONTACT</a></li>
+                            <span> | </span>
+                            <li><a href="">STORE LOCATOR</a></li>
+                            <span> | </span>
+                            <li><a href="">EVENTS</a></li>
+                            <span> | </span>
+                            <li><a href="">CAREERS</a></li>
+                            <span> | </span>
+                            <li><a href="">PRESS ROOM</a></li>
+                            <span> | </span>
+                            <li><a href="">ENTERPRISE DURABLE</a></li>
+                        </ul>
+                    </nav>
+                    <nav id="nav2">
+                        <ul>
+                            <li><a href="">LEGAL</a></li>
+                            <span> | </span>
+                            <li><a href="">CODE OF ANTITRUST</a></li>
+                            <span> | </span>
+                            <li><a href="">TECHNICAL COMMUNICATION</a></li>
+                            <span> | </span>
+                            <li><a href="">CANCELLATION</a></li>
+                            <span> | </span>
+                            <li><a href="">COOKIES</a></li>
+                            <span> | </span>
+                            <li><a href="">GLOSSARY</a></li>
+                            <span> | </span>
+                            <li><a href="">SITEMAP</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div id="follow">
+                <div class="social">
+                    <span>Follow <span class="italic">Nespresso</span> on</span>
+                    <div class="socialIcons">
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <a href="#top">Top of the page <i class="fa-solid fa-circle-chevron-up"></i></a>
+                </div>
+                <div class="cc">
+                    <img src="./logo-white.svg" alt="logo">
+                    <span><span class="italic">Nespresso</span> S.A. 2017</span>
+                </div>
+            </div> 
+        </footer>
+           
+    </main>
+    <script src="errorSubmit.js"></script>
+</body>
+</html>

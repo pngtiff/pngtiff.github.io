@@ -1,0 +1,425 @@
+body {
+    margin: 0;
+    background-color: black;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 0.85rem;
+    color: rgb(83, 82, 82);
+}
+
+main {
+    margin: auto;
+    width: 1000px;
+}
+
+@media screen and (max-width: 1000px) {
+    main {
+        width: 100%;
+    }
+}
+
+h2, p {
+    margin: 6px 0;
+}
+
+a {
+    color: rgb(202, 165, 41);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 10;
+}
+
+header img {
+    width: 160px;
+    margin: 25px 0;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+.italic {
+    font-style: italic;
+}
+
+#topBar {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    margin: 8rem 0 1rem 0;
+}
+
+#topBar div p {
+    margin: 0px;
+}
+
+#topBar, form>div:nth-child(3) {
+    background-color: #F1F1F1;
+}
+
+form>div:first-child, form>div:last-child {
+    background-color: #fff;
+}
+
+#form1 {
+    padding: 30px;
+}
+
+input {
+    font-family: inherit;
+    padding: 12px 8px;
+    border: 1px solid rgb(201, 199, 199);
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.personal {
+    width: 375px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.personal input, .personal div {
+    width: 200px;
+}
+
+@media screen and (max-width: 1000px) {
+    .personal {
+        width: 80%;
+    }
+
+    .personal label {
+        width: 70%;
+    }
+
+    .personal input, .personal div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .personal {
+        padding: 10px 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .personal div div, .personal input {
+        width: 100%;
+    }
+
+    .personal input {
+        padding: 20px 8px 4px 8px;
+    }
+
+    .personal {
+        position: relative;
+    }
+
+    .personal label {
+        position: absolute;
+        top: 25px;
+        left: 10px;
+        z-index: 1;
+        transform-origin: top left;
+        transition: all .2s ease-in-out;
+    }
+
+    .personal:focus-within label {
+        transform: translate(0, -10px) scale(.75);
+    }
+}
+
+#memberHeader {
+    background-color: #c2c2c2;
+    color: black;
+    padding: 15px 30px;
+}
+
+
+#member>input {
+    margin: 20px 5px 5px 30px;
+}
+
+#yes:checked~#memberInfo {
+    height: 220px;
+}
+
+#memberInfo {
+    overflow-y: hidden;
+    height: 0;
+    transition: height 1s ease;
+    padding: 10px 80px 0px 80px;
+    box-sizing: border-box;
+}
+
+#memberInfo>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    /* width: 100%; */
+}
+
+#memberInfo>div>div, #memberInfo input {
+    width: 400px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    #memberInfo label {
+        width: 50%;
+    }
+
+    #memberInfo div div, #memberInfo input {
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    #memberInfo {
+        padding: 10px 30px;
+    }
+    
+    #memberInfo div div, #memberInfo input {
+        width: 100%;
+    }
+    
+    #memberInfo input {
+        padding: 20px 8px 4px 8px;
+    }
+
+    #memberInfo div {
+        position: relative;
+    }
+    
+    #memberInfo label {
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        z-index: 1;
+        transform-origin: top left;
+        transition: all .2s ease-in-out;
+    }
+
+    #memberInfo div:focus-within label {
+        transform: translate(0, -10px) scale(.75);
+    }
+}
+
+
+.continue {
+    border-top: 1px solid rgb(173, 173, 173);
+    padding: 20px 30px;
+}
+
+.continue div {
+    text-align: right;
+}
+
+
+.button {
+    background-color: rgb(45, 129, 45);
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    width: 200px;
+    height: 2.5rem;
+    border-radius: 3px;
+    border: none;
+}
+
+.button:hover {
+    box-shadow: 0px 2px 2px gray;
+}
+
+@media screen and (max-width: 768px) {
+    .continue div {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .button {
+        width: 100%;
+    }
+}
+
+
+#bottomBar {
+    background-color: rgb(34, 34, 34);
+    margin-top: 1rem;
+    padding: 2px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.language select {
+    margin-left: 10px;
+    font-family: inherit;
+    padding: 10px;
+    border-radius: 3px;
+    width: 100px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+li {
+    list-style: none;
+    margin: 0 3px;
+}
+
+#nav1 a {
+    color: rgb(173, 173, 173);
+}
+
+#nav2 a {
+    color: inherit;
+}
+
+#nav1 a:hover, #nav2 a:hover {
+    color: #fff;
+}
+
+
+#follow {
+    color: #fff;
+    background-color: #000;
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+#follow a {
+    color: #fff;
+}
+
+#follow i {
+    padding: 0 8px;
+}
+
+.social {
+    display: flex;
+}
+
+#follow img {
+    width: 60px;
+    margin-right: 6px;
+}
+
+.cc {
+    color: rgb(116, 116, 116);
+    font-size: .75rem;
+    align-items: top;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 1000px) {
+    footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #bottomBar, #follow {
+        width: 768px;
+    }
+
+    #bottomBar {
+        flex-direction: column;
+    }
+
+    .language {
+        align-self: flex-start;
+    }
+
+    .navLinks {
+        align-self: flex-end;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer, #bottomBar, #follow {
+        width: 100%;
+    }
+
+    #follow, .navLinks, footer nav ul {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+    }
+
+    footer nav ul {
+        padding-left: 8px;
+    }
+
+    ul span {
+        visibility: hidden;
+    }
+
+    #follow>div {
+        margin: 10px 0;
+        align-self: flex-start;
+    }
+
+    .social {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .socialIcons {
+        font-size: 2rem;
+        align-self: center;
+    }
+
+}
+
+/* JS */
+
+.error {
+    display: none;
+    font-size: .8rem;
+    color:firebrick;
+    margin-top: 8px;
+}
+
+.red, .star {
+    color: firebrick;
+}
+
+input.red {
+    border: 1.5px solid firebrick;
+}
+
+.display {
+    display: block;
+}

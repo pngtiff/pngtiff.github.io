@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main {
+    width: 80vw;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+a {
+    color: royalblue;
+    text-decoration: none;
+}
