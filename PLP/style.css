@@ -117,10 +117,14 @@ a:active {
     margin-top: 150px;
     padding: 0;
   }
+  
+  #main-image {
+    width: 100vw;
+  }
 }
 
 #main-image {
-  height: 500px;
+  max-width: 500px;
 }
 
 #main-text {
