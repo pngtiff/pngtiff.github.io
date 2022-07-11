@@ -1,7 +1,3 @@
-// app_id : 5df5d6fb37766078e5055bbfbca1c7a1
-// https://api.openweathermap.org/data/2.5/forecast?q=Seoul&appid=5df5d6fb37766078e5055bbfbca1c7a1&units=metric
-
-
 let search = document.querySelector('#search'),
     wrapper = document.querySelector('#mainWrapper');
 
