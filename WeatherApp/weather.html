@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<style>
+    @font-face {
+        font-family: 'RubikPuddles';
+        src: url('../../Fonts/RubikPuddles-Regular.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Dosis';
+        src: url('../../Fonts/Dosis-VariableFont_wght.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'CabinSketch';
+        src: url('../../Fonts/CabinSketch-Bold.ttf') format('truetype');
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        height: 100%;
+        background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+        background-repeat: no-repeat;        
+        background-attachment: fixed;
+        font-family: 'Dosis', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    main {
+        margin: auto;
+        width: 80vw;
+        min-width: 365px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    h1 {
+        font-family: 'RubikPuddles', sans-serif;
+        font-size: 4rem;
+        color: #fff;
+        text-shadow: 5px 5px 10px rgb(157, 214, 250) ;
+    }
+
+    h2 {
+        font-size: 2.3rem;
+        margin: 0;
+    }
+
+    h3 {
+        font-size: 2.2rem;
+        margin: 0.5rem 0;
+    }
+
+    p {
+        font-size: 1.3rem;
+        margin: 0;
+    }
+
+    input {
+        width: 80%;
+        height: 1.5rem;
+        padding: 20px;
+        border-radius: 20px;
+        font-family: inherit;
+        font-size: 1.2rem;
+        border: 1px solid rgb(157, 214, 250);
+        outline: 1px solid rgb(157, 214, 250);
+        margin-bottom: 15px;
+    }
+
+    
+    span {
+        display: block;
+        margin-top: .5rem;
+    }
+
+    #mainWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        min-width: 365px;
+    }
+
+    #mainWrapper div {
+        border-radius: 15px;
+        margin-bottom: 15px;
+        background-color: #fff;
+        padding: 20px;
+        min-width: 175px;
+        width: 23%;
+    }
+    
+    #mainWrapper .today {
+        width: 100%;
+    }
+
+    .icons {
+        margin: 10px;
+    }
+
+    #mainWrapper .error {
+        width: 100%;
+        font-family: 'CabinSketch', sans-serif;
+        font-size: 4rem;
+        color:lightblue;
+    }
+</style>
+<body>
+    <main>
+        <header>
+            <h1>
+                <a href="">
+                    Weather Forecast
+                </a>
+            </h1>
+            <div id="searchBar">
+                <input type="text" id="search" autocomplete="off" placeholder="Search for a city">
+            </div>
+        </header>
+        <div id="mainWrapper"></div>
+    </main>
+    <script src="./weather.js"></script>
+</body>
+</html>

@@ -226,6 +226,13 @@ a:active {
   height: 315px;
 }
 
+@media (max-width: 900px) {
+  #video {
+    width: 400px;
+    height: 250px;
+  }
+}
+
 @media (min-width: 900px) {
   #pricing {
     display: flex;
