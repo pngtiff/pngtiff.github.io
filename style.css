@@ -1,16 +1,268 @@
+@font-face {
+    font-family: 'Dosis';
+    src: url('./Fonts/Dosis-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Artis';
+    src: url('./Fonts/Artis\ Regular.otf') format('truetype');
+}
+
+:root {
+    --primaryColor: #6a85b6;
+    --darkGrey: #646464;
+    --lightGrey: #dfdfdf;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Dosis', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5rem;
+    /* background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%); */
+    background: url(./images/bgImage.JPG) no-repeat;
+    background-position: 0 65%;
+    background-size: 100%;
+    box-shadow: inset 0 0 0 1000px rgba(135,135,135,.4);
+    overflow-y: hidden;
+    height: 100vh;
+    color: #fff
+}
+
+@media screen and (max-width: 640px) {
+    body{
+        background-size: 100vh;
+        background-position: center;
+    }
+    
 }
 
 main {
     width: 80vw;
     margin: auto;
-    margin-top: 10vh;
+    padding-top: 3vh;
+    min-width: 350px;
 }
 
 a {
-    color: royalblue;
+    color: var(--primaryColor);
     text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+}
+
+.navButton {
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navButton:hover {
+    background-color: var(--lightGrey);
+}
+
+.hamburger {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+rect {
+    fill: var(--primaryColor);
+}
+
+#navMenu {
+    background-color: #6a85b6;
+    opacity: .85;
+    color: #fff;
+    width: 25vw;
+    height: 100vh;
+    padding-top: 10vh;
+    position: absolute;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: 0.5s;
+}
+
+.closeMenu {
+    left: -25vw;
+}
+
+.openMenu {
+    left: 0;
+}
+
+#navMenu a {
+    color: #fff;
+}
+
+#navMenu a:hover {
+    text-decoration: underline;
+    color: var(--lightGrey);
+    font-size: 1.3rem;
+}
+
+#navMenu ul, #navMenu li {
+    list-style: none;
+    padding: 0;
+}
+
+.typewrite {
+    font-family: 'Artis', sans-serif;
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 5px 5px 2px #646464 ;
+}
+
+.typewrite ~ p {
+    margin: 0;
+}
+
+.tempLinks a {
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 1rem;
+    padding: 0.125rem 0.5rem;
+}
+
+.tempLinks a:hover {
+    background-color: var(--lightGrey);
+}
+
+#aboutMeModal, #contactModal {
+    position: fixed;
+    z-index: 1;
+    width: 70vw;
+    height: 60vh;
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 2.5rem 0 0 0;
+    transition: 0.75s;
+    overflow-y: auto;
+}
+
+#aboutMeModal::-webkit-scrollbar, #contactModal::-webkit-scrollbar {
+    display: none;
+  }
+
+.closeModal {
+    bottom: -100vw;
+    right: -100vh;
+    /* display: none; */
+}
+
+.openModal {
+    bottom: 0;
+    right: 0;
+    /* display: block; */
+}
+
+.modalContent {
+    width: 100%;
+    color: var(--darkGrey);
+    padding: 1rem 3rem 3rem 5rem;
+    font-size: 1.35rem;
+}
+
+.closeModalBtn {
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--primaryColor);
+}
+
+.closeModalBtn:hover {
+    background-color: var(--lightGrey);
+}
+
+.contactForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.contactForm>div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.contactForm>div>div {
+    width: 100%;
+}
+
+.contactForm>div>div:first-child {
+    margin-right: 1rem;
+}
+
+.formItem {
+    position: relative;
+}
+
+.contactForm label {
+    font-size: 1rem;
+    position: absolute;
+    top: -0.75rem;
+    left: 2rem;
+    background-color: var(--primaryColor);
+    padding: 0 1rem;
+    color: #fff;
+}
+
+.contactForm input, .contactForm textarea {
+    outline: none;
+    font-family: inherit;
+    font-size: 1.25rem;
+    padding: 1rem 1rem .5rem 1rem;
+    background-color:  rgba(255, 255, 255, .3);
+}
+
+.contactForm input {
+    width: 100%;
+    height: 4rem;
+    border: var(--primaryColor) 2px solid;
+}
+
+.contactForm textarea {
+    min-width: 100%;
+    min-height: 10rem;
+    height: 20rem;
+    border: var(--primaryColor) 2px solid;
+}
+
+.contactForm button {
+    border: none;
+    font-family: inherit;
+    font-size: 1.25rem;
+    cursor: pointer;
+    width: 30%;
+    min-width: fit-content;
+    padding: .75rem;
+    margin-top: 1rem;
+    background-color: var(--lightGrey);
+}
+
+.contactForm button:hover {
+    background-color: var(--primaryColor);
+    color: #fff;
 }
