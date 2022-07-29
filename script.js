@@ -90,8 +90,6 @@ let aboutModal = document.querySelector('#aboutMeModal'),
     contactModal = document.querySelector('#contactModal'),
     contactLink = document.querySelector('#contact');
 
-let mainText = document.querySelector('.typewrite');
-
 
 const toggleAboutModal = function (e) {
     e.preventDefault()
@@ -119,10 +117,15 @@ const toggleContactModal = function (e) {
     }
 }
 
-contactLink.addEventListener('click', toggleContactModal);
 
-mainText.addEventListener('click', toggleAboutModal);
+if(document.querySelector('.typewrite')) {
+    let mainText = document.querySelector('.typewrite');
+    mainText.addEventListener('click', toggleAboutModal);
+}
+
+contactLink.addEventListener('click', toggleContactModal);
 aboutMeLink.addEventListener('click', toggleAboutModal);
+
 
 const closeModals = function() {
     if(aboutModal.classList.contains('openModal') || contactModal.classList.contains('openModal')) {
