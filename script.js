@@ -141,3 +141,16 @@ main.addEventListener('click', closeModals);
 closeModalBtns.forEach(closeModalBtn => {
     closeModalBtn.addEventListener('click', closeModals)
 });
+
+
+// Project stack keyword styling
+let stacklists = document.querySelectorAll('.stackList')
+for(i=0; i<stacklists.length; i++) {
+    let stacks = stacklists[i].getAttribute('dataType').split('/');
+    stacks.forEach(stack => {
+        let text = document.createElement('p');
+        text.textContent = (stack);
+        text.classList.add('stack');
+        stacklists[i].appendChild(text);
+    })
+}

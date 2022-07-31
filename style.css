@@ -25,31 +25,24 @@ body {
     font-size: 1.5rem;
     /* background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%); */
     background: url(./images/bgImage.JPG) no-repeat;
-    background-position: 0 65%;
-    background-size: 100%;
+    background-position: center 65%;
+    background-size: cover;
     box-shadow: inset 0 0 0 1000px rgba(135,135,135,.4);
     overflow-y: auto;
     min-height: 100vh;
     height: 100%;
-    color: #fff
+    color: #fff;
+    position: relative;
 }
 
 body::-webkit-scrollbar {
     display: none;
 }
 
-@media screen and (max-width: 640px) {
-    body{
-        background-size: 100vh;
-        background-position: center;
-    }
-    
-}
-
 main {
     width: 80vw;
     margin: auto;
-    padding-top: 3vh;
+    padding: 2rem 0;
     min-width: 350px;
 }
 
@@ -72,6 +65,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
 }
 
 .navButton:hover {
@@ -92,16 +86,17 @@ rect {
     opacity: .85;
     color: #fff;
     width: 25vw;
-    height: 100vh;
-    padding-top: 10vh;
+    height: 100%;
+    padding-top: 5rem;
     position: absolute;
     top: 0;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     transition: 0.5s;
+    z-index: 1;
 }
 
 .closeMenu {
-    left: -25vw;
+    left: -100vw;
 }
 
 .openMenu {
@@ -162,15 +157,61 @@ nav+div {
 }
 
 .mainLinks a:hover {
-    background-color: var(--lightGrey);
+    background-color: var(--primaryColor);
+    color: #fff;
+    outline: #fff 1px solid;
+    outline-offset: 3px;
 }
+
+footer {
+    position: absolute;
+    padding: 1rem;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+}
+
+
+@media screen and (max-width: 550px) {
+    .typewrite {
+        font-size: 3.25rem;
+    }
+
+    .mainLinks {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20%;
+    }
+
+    /* .show {
+        display: none;
+    } */
+
+    #navMenu {
+        width: 100vw;
+        opacity: 0.95;
+        position: fixed;
+    }
+
+    .navButton {
+        z-index: 2;
+    }
+
+    #aboutMeModal, #contactModal {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+
+/* MODALS */
 
 #aboutMeModal, #contactModal {
     position: fixed;
     z-index: 1;
     width: 70vw;
-    height: 60vh;
-    background-color: rgba(255, 255, 255, .9);
+    height: 65vh;
+    background-color: rgba(255, 255, 255, .95);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     border-radius: 2.5rem 0 0 0;
     transition: 0.75s;
@@ -196,7 +237,7 @@ nav+div {
 .modalContent {
     width: 100%;
     color: var(--darkGrey);
-    padding: 1rem 3rem 3rem 5rem;
+    padding: 1rem 4rem 2rem 4rem;
     font-size: 1.35rem;
 }
 
@@ -271,8 +312,8 @@ nav+div {
 
 .contactForm textarea {
     min-width: 100%;
-    min-height: 10rem;
-    height: 20rem;
+    min-height:10rem;
+    height: 15rem;
     border: var(--primaryColor) 2px solid;
 }
 
@@ -293,11 +334,47 @@ nav+div {
     color: #fff;
 }
 
+
+@media screen and (max-width: 750px) {
+    .contactForm>div {
+        flex-direction: column;
+    }
+
+    .contactForm>div>div:first-child {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #aboutMeModal, #contactModal {
+        width: 100vw;
+        height: 100vh;
+        z-index: 3;
+    }
+}
+
+
 /* PROJECTS PAGE */
+#projContainer {
+    padding-bottom: 3rem;
+}
+
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
+}
+
+@media screen and (max-width: 800px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .projects {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .projects span {
@@ -305,7 +382,7 @@ nav+div {
     border-radius: 0.5rem;
     padding: 0.125rem 0.5rem;
     font-size: 1.35rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
     transition: all 0.3s ease;
 }
 
@@ -320,6 +397,7 @@ nav+div {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     overflow: hidden;
     border-radius: 0.35rem;
+    position: relative;
 }
 
 .projImg img {
@@ -330,10 +408,48 @@ nav+div {
     transition: all 1s ease;
 }
 
-
 .projImg:hover>img {
     /* box-shadow: inset 0 0 0 100px rgba(255,255,255, 1); */
-    width: 125%;
-    height: 125%;
-    object-position: center;
+    transform: scale(1.2);
+}
+
+.projCap {
+    position: absolute;
+    background-color: #fff;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.1);
+    opacity: 0;
+    transition: all 0.5s ease;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+
+.projCap h5, .projCap h6 {
+    margin: 1rem;
+}
+
+.projImg:hover>.projCap {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.stackList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.stack {
+    background-color: var(--primaryColor);
+    border-radius: 0.5rem;
+    padding: 0.125rem 0.5rem;
+    margin: 0 0.15rem;
+    color: #fff;
 }
