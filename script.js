@@ -154,3 +154,15 @@ for(i=0; i<stacklists.length; i++) {
         stacklists[i].appendChild(text);
     })
 }
+
+// Resume skill list styling
+let skills = document.querySelectorAll('.skillsList')
+for(i=0; i<skills.length; i++) {
+    let stacks = skills[i].getAttribute('dataType').split('/');
+    stacks.forEach(stack => {
+        let text = document.createElement('li');
+        text.textContent = (stack);
+        text.classList.add('stack');
+        skills[i].appendChild(text);
+    })
+}
