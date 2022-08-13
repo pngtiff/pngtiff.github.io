@@ -143,6 +143,20 @@ closeModalBtns.forEach(closeModalBtn => {
 });
 
 
+let senderName = document.getElementById('name'),
+    senderEmail = document.getElementById('email'),
+    senderMsg = document.getElementById('message'),
+    contactForm = document.querySelector('.contactForm'),
+    sendBtn = document.getElementById('sendBtn'),
+    sendLink = document.getElementById('sendLink')
+
+sendBtn.addEventListener('click', () => {
+    // e.preventDefault();
+    sendLink.setAttribute('href', `mailto:tiffanypangtc@gmail.com?subject=${senderName.value}&body=${senderMsg.value}`)
+})
+
+
+
 // Project stack keyword styling
 let stacklists = document.querySelectorAll('.stackList')
 for(i=0; i<stacklists.length; i++) {
