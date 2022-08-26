@@ -145,13 +145,23 @@
         font-size: 4rem;
         color:lightblue;
     }
+
+    footer {
+        margin: 1rem;
+        color:rgba(110, 154, 182, 0.6);
+    }
+
+    footer a {
+        color:rgba(110, 154, 182, 0.6);
+        text-decoration: underline;
+    }
 </style>
 <body>
     <main>
         <header>
             <h1>
                 <a href="">
-                    Improved<br>Weather Forecast
+                    Weather Forecast<br>v.2
                 </a>
             </h1>
         </header>
@@ -160,6 +170,9 @@
             <div id="results"></div>
         </div>
         <div id="mainWrapper"></div>
+        <footer>
+            <p>Version 1 <a href="/WeatherApp/weather.html">Here</a></p>
+        </footer>
     </main>
     <script src="./weatherImproved.js"></script>
 </body>

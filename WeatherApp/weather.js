@@ -10,7 +10,7 @@ let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturda
  */
 const weatherShow = function (city) {
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=5df5d6fb37766078e5055bbfbca1c7a1&units=metric`);
+    xhr.open('GET', `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=5df5d6fb37766078e5055bbfbca1c7a1&units=metric`);
     
     xhr.addEventListener('readystatechange', function () {
         if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
